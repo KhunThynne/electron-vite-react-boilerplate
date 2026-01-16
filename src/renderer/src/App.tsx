@@ -11,13 +11,13 @@ import {
 import { FileCode, Globe, Send } from 'lucide-react'
 import electronLogo from './assets/electron.svg'
 import Versions from '@components/Versions'
+import clsx from 'clsx'
 
 function App(): React.JSX.Element {
   const ipcHandle = (): void => window.electron.ipcRenderer.send('ping')
-
   return (
     <div className="flex min-h-screen w-full items-center justify-center bg-gray-50 p-4 dark:bg-gray-950">
-      <Card className="w-full max-w-md shadow-lg transition-all hover:shadow-xl">
+      <Card className={clsx(`w-full max-w-md shadow-lg transition-all hover:shadow-xl`)}>
         <CardHeader className="flex flex-col items-center gap-4 pb-2">
           <Avatar className="h-24 w-24 border-4 border-white shadow-sm dark:border-gray-800">
             <AvatarImage src={electronLogo} alt="Electron Logo" className="object-contain p-2" />
