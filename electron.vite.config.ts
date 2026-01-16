@@ -2,7 +2,7 @@ import { resolve } from 'path'
 import { defineConfig } from 'electron-vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
-import generouted from '@generouted/react-router/plugin'
+
 export default defineConfig({
   main: {},
   preload: {},
@@ -13,6 +13,6 @@ export default defineConfig({
         '@components': resolve('src/renderer/src/shared/components')
       }
     },
-    plugins: [react(), tailwindcss(), generouted()]
+    plugins: [react(), tailwindcss()]
   }
 })

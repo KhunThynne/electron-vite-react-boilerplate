@@ -8,7 +8,7 @@ export default function Provider({ children }: { children: React.ReactNode }): R
     <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
       <Toaster />
       {children}
-      <Outlet />
+      {/* <Outlet /> */}
       <Scripts />
     </ThemeProvider>
   )
