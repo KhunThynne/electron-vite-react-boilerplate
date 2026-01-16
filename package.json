@@ -1,9 +1,9 @@
 {
-  "name": "electron-vite-boilerplate",
+  "name": "electron-vite-react-boilerplate",
   "version": "0.0.1",
   "description": "An Electron application with React and TypeScript",
   "main": "./out/main/index.js",
-  "author": "example.com",
+  "author": "Developed by KhunThynne",
   "homepage": "https://electron-vite.org",
   "scripts": {
     "format": "prettier --write .",
