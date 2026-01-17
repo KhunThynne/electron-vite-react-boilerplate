@@ -1,0 +1,31 @@
+{
+  "Index": {
+    "title": "Next.js Starter",
+    "description": "เทมเพลตเริ่มต้นครบวงจรด้วย Next.js, Tailwind, Shadcn และอื่นๆ"
+  },
+  "not_found": {
+    "description": "ไม่พบ"
+  },
+  "Sidebar": {
+    "dashboard": "แดชบอร์ด",
+    "settings": "การตั้งค่า",
+    "app_name": "แอพอิเล็กตรอน"
+  },
+  "Settings": {
+    "title": "การตั้งค่า",
+    "account": "บัญชี",
+    "account_desc": "แก้ไขบัญชีของคุณที่นี่ คลิกบันทึกเมื่อเสร็จสิ้น",
+    "password": "รหัสผ่าน",
+    "password_desc": "เปลี่ยนรหัสผ่านของคุณที่นี่ หลังจากบันทึกคุณจะออกจากระบบ",
+    "labels": {
+      "name": "ชื่อ",
+      "username": "ชื่อผู้ใช้",
+      "current_password": "รหัสผ่านปัจจุบัน",
+      "new_password": "รหัสผ่านใหม่"
+    },
+    "buttons": {
+      "save_changes": "บันทึกการเปลี่ยนแปลง",
+      "save_password": "บันทึกรหัสผ่าน"
+    }
+  }
+}

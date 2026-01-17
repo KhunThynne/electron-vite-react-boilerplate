@@ -1,4 +1,5 @@
 'use client'
+import { useTranslation } from 'react-i18next'
 import { Home, LayoutDashboard, Settings } from 'lucide-react'
 import { NavLink } from 'react-router-dom'
 import { cn } from '@components/ui/utils'
@@ -6,12 +7,14 @@ import { Avatar, AvatarFallback, AvatarImage } from '@components/ui/avatar'
 import clsx from 'clsx'
 import { useSidebarContext } from '../contexts/ProviderSidebar'
 import { SwitchThemeButton } from './SwitchThemeButton'
+import { SwitchLanguageButton } from './SwitchLanguageButton'
 
 export function AppSidebar() {
+  const { t } = useTranslation()
   const { open } = useSidebarContext()
   const navItems = [
-    { icon: LayoutDashboard, label: 'Dashboard', to: '/' },
-    { icon: Settings, label: 'Settings', to: '/settings' }
+    { icon: LayoutDashboard, label: t('Sidebar.dashboard'), to: '/' },
+    { icon: Settings, label: t('Sidebar.settings'), to: '/settings' }
   ]
 
   return (
@@ -27,7 +30,7 @@ export function AppSidebar() {
             <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
               <Home className="size-5" />
             </div>
-            <span>Electron App</span>
+            <span>{t('Sidebar.app_name')}</span>
           </NavLink>
         </div>
         <div className="flex-1 overflow-auto py-4">
@@ -49,8 +52,9 @@ export function AppSidebar() {
             ))}
           </nav>
         </div>
-        <div className="p-4 flex justify-end">
+        <div className="p-4 flex justify-end gap-2">
           <SwitchThemeButton />
+          <SwitchLanguageButton />
         </div>
         <div className="border-t p-4">
           <div className="flex items-center gap-4">

@@ -9,7 +9,7 @@ export default function Layout() {
 
       <div className="flex flex-col">
         <AppHeader />
-        <main className="flex flex-1 flex-col gap-4 p-4 lg:gap-6 lg:p-6">
+        <main className="p-4 lg:p-6  @container size-full">
           <Outlet />
         </main>
       </div>
