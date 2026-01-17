@@ -1,4 +1,3 @@
-import _ from 'lodash'
 import { useFieldContext } from '../../hooks'
 import { useStore } from '@tanstack/react-form'
 import { FieldError } from '@components/ui/field'

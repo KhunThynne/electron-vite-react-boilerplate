@@ -1,7 +1,6 @@
 import { Fragment } from 'react'
 
 import { Asterisk } from 'lucide-react'
-import _ from 'lodash'
 import type { LabelDescription, WithClassNames } from '../type'
 import { FieldLabel, FieldDescription } from '@components/ui/field'
 import { cn } from '@components/ui/utils'

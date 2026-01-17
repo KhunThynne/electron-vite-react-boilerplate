@@ -10,6 +10,9 @@ An Electron application built with React, TypeScript, and modern UI tooling.
 - **UI Components**: [shadcn/ui](https://ui.shadcn.com/) (built on [Radix UI](https://www.radix-ui.com/)), [class-variance-authority](https://cva.style/)
 - **Icons**: [Lucide React](https://lucide.dev/)
 - **State/Theme**: [next-themes](https://github.com/pacocoursey/next-themes)
+- **Form Management**: [TanStack Form](https://tanstack.com/form/latest)
+- **Validation**: [Zod](https://zod.dev/)
+- **Internationalization**: [react-i18next](https://react.i18next.com/)
 - **Utilities**: [cn (clsx + tailwind-merge)](https://github.com/dcastil/tailwind-merge)
 
 ## ✨ Features
@@ -19,6 +22,8 @@ An Electron application built with React, TypeScript, and modern UI tooling.
 - **Optimized Bundling**: Separate builds for Main, Preload, and Renderer.
 - **Component System**: Accessible, unstyled UI primitives styled with Tailwind CSS.
 - **Auto-Update Ready**: Configured with `electron-updater`.
+- **Internationalization**: Multi-language support with i18n.
+- **Form Handling**: Type-safe forms with TanStack Form and Zod validation.
 - **Linting & Formatting**: configured with ESLint and Prettier.
 
 ## 🛠️ Project Setup
