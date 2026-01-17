@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react'
 
-import { DialogInstance, DialogInstanceProvider } from "./DialogInstance";
-import type { DialogInstanceProps } from "./index.type";
+import { DialogInstance, DialogInstanceProvider } from './DialogInstance'
+import type { DialogInstanceProps } from './index.type'
 /**
  * `createDialog` is a factory function that generates a custom `Dialog` component
  * with preset default properties (`initialProps`) and allows runtime overrides.
@@ -33,16 +33,16 @@ import type { DialogInstanceProps } from "./index.type";
 export function createDialog(initialProps: DialogInstanceProps) {
   function Dialog(
     runtimeProps: Partial<DialogInstanceProps> & {
-      ref?: React.Ref<HTMLDivElement>;
+      ref?: React.Ref<HTMLDivElement>
     }
   ) {
     const setting: Partial<DialogInstanceProps> = {
       ...initialProps,
       options: {
         ...initialProps.options,
-        trigger: { asChild: true },
-      },
-    };
+        trigger: { asChild: true }
+      }
+    }
 
     const mergedProps: Partial<DialogInstanceProps> = {
       ...setting,
@@ -52,20 +52,20 @@ export function createDialog(initialProps: DialogInstanceProps) {
         ...runtimeProps?.options,
         dialog: {
           ...setting.options?.dialog,
-          ...runtimeProps?.options?.dialog,
-        },
-      },
-    };
+          ...runtimeProps?.options?.dialog
+        }
+      }
+    }
 
     return (
       <DialogInstanceProvider>
         <DialogInstance {...mergedProps} />
       </DialogInstanceProvider>
-    );
+    )
   }
 
-  Dialog.displayName = "DialogWrapper";
-  return Object.assign(Dialog, { displayName: "DialogComponent" }) as React.FC<
+  Dialog.displayName = 'DialogWrapper'
+  return Object.assign(Dialog, { displayName: 'DialogComponent' }) as React.FC<
     Partial<DialogInstanceProps> & { ref?: React.Ref<HTMLDivElement> }
-  >;
+  >
 }

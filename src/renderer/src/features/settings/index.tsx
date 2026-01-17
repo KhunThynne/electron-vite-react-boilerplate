@@ -15,7 +15,7 @@ export default function SettingsPage() {
   return (
     <div className="flex flex-col gap-4">
       <h2 className="text-3xl font-bold tracking-tight">Settings</h2>
-      <Tabs defaultValue="account" className="w-[400px]">
+      <Tabs defaultValue="account" className="">
         <TabsList className="grid w-full grid-cols-2">
           <TabsTrigger value="account">Account</TabsTrigger>
           <TabsTrigger value="password">Password</TabsTrigger>

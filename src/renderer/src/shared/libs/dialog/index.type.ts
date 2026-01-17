@@ -1,36 +1,36 @@
-import type {
-  DialogContentProps,
-  DialogDescriptionProps,
-  DialogOverlayProps,
+import {
   DialogPortalProps,
+  DialogOverlayProps,
+  DialogContentProps,
+  DialogTriggerProps,
   DialogProps,
   DialogTitleProps,
-  DialogTriggerProps,
-} from "@radix-ui/react-dialog";
+  DialogDescriptionProps
+} from '@radix-ui/react-dialog'
 
 export type DialogOptions = {
-  disableBackdropClose?: boolean;
-  portal?: DialogPortalProps;
-  overlay?: DialogOverlayProps | true;
-  content?: DialogContentProps;
-  trigger?: DialogTriggerProps;
-  dialog?: DialogProps;
-  title?: DialogTitleProps;
-  description?: DialogDescriptionProps;
+  disableBackdropClose?: boolean
+  portal?: DialogPortalProps
+  overlay?: DialogOverlayProps | true
+  content?: DialogContentProps
+  trigger?: DialogTriggerProps
+  dialog?: DialogProps
+  title?: DialogTitleProps
+  description?: DialogDescriptionProps
   footer?: {
-    className?: string;
-  };
+    className?: string
+  }
   header?: {
-    className?: string;
-  };
-};
+    className?: string
+  }
+}
 export type DialogInstanceProps = {
-  options?: DialogOptions;
-  title?: string;
-  description?: string;
-  content?: React.ReactNode | React.JSX.Element;
-  footer?: React.ReactNode | React.JSX.Element;
-  trigger?: React.ReactNode | string;
-  variant?: "fullscreen" | "modal";
-  mode?: "static" | "dismissable";
-};
+  options?: DialogOptions
+  title?: string
+  description?: string
+  content?: React.ReactNode | React.JSX.Element
+  footer?: React.ReactNode | React.JSX.Element
+  trigger?: React.ReactNode | string
+  variant?: 'fullscreen' | 'modal'
+  mode?: 'static' | 'dismissable'
+}
