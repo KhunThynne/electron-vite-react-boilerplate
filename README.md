@@ -11,6 +11,7 @@ An Electron application built with React, TypeScript, and modern UI tooling.
 - **Icons**: [Lucide React](https://lucide.dev/)
 - **State/Theme**: [next-themes](https://github.com/pacocoursey/next-themes)
 - **Form Management**: [TanStack Form](https://tanstack.com/form/latest)
+- **Routing**: [TanStack Router](https://tanstack.com/router/latest)
 - **Validation**: [Zod](https://zod.dev/)
 - **Internationalization**: [react-i18next](https://react.i18next.com/)
 - **Utilities**: [cn (clsx + tailwind-merge)](https://github.com/dcastil/tailwind-merge)
@@ -23,6 +24,7 @@ An Electron application built with React, TypeScript, and modern UI tooling.
 - **Component System**: Accessible, unstyled UI primitives styled with Tailwind CSS.
 - **Auto-Update Ready**: Configured with `electron-updater`.
 - **Internationalization**: Multi-language support with i18n.
+- **Routing**: Type-safe routing with TanStack Router.
 - **Form Handling**: Type-safe forms with TanStack Form and Zod validation.
 - **Linting & Formatting**: configured with ESLint and Prettier.
 
@@ -71,6 +73,8 @@ The output will be in the `dist` or `release` folder (depending on configuration
 - `npm run format`: Format code with Prettier
 - `npm run lint`: Lint code with ESLint
 - `npm run typecheck`: Run TypeScript type checking
+- `npm run generate-routes`: Generate route tree for TanStack Router
+- `npm run watch-routes`: Watch and generate routes for TanStack Router
 - `npm run release`: Create a new release version (standard-version)
 
 ## 📁 Project Structure

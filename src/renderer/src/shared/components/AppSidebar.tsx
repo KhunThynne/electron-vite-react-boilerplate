@@ -15,7 +15,7 @@ export function AppSidebar() {
   const location = useLocation()
   const { open } = useSidebarContext()
   const navItems = [
-    { icon: HomeIcon, label: t('Sidebar.app_name'), to: '/' },
+    { icon: HomeIcon, label: t('Sidebar.app_name'), to: '/dashboard' },
     { icon: LayoutDashboard, label: t('Sidebar.dashboard'), to: '/dashboard' },
     { icon: Settings, label: t('Sidebar.settings'), to: '/settings' }
   ]
