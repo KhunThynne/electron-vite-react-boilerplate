@@ -8,8 +8,14 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "i18n-ally.localesPaths": [
-    "src/renderer/src/messages",
-    "src/renderer/src/shared/libs/i18n"
-  ]
+  "i18n-ally.localesPaths": ["src/renderer/src/messages", "src/renderer/src/shared/libs/i18n"],
+  "files.readonlyInclude": {
+    "**/routeTree.gen.ts": true
+  },
+  "files.watcherExclude": {
+    "**/routeTree.gen.ts": true
+  },
+  "search.exclude": {
+    "**/routeTree.gen.ts": true
+  }
 }
