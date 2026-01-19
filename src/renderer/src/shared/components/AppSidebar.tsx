@@ -1,6 +1,6 @@
 'use client'
 import { useTranslation } from 'react-i18next'
-import { Home, LayoutDashboard, Settings } from 'lucide-react'
+import { Home, HomeIcon, LayoutDashboard, Settings } from 'lucide-react'
 
 import { cn } from '@components/ui/utils'
 import { Avatar, AvatarFallback, AvatarImage } from '@components/ui/avatar'
@@ -15,7 +15,8 @@ export function AppSidebar() {
   const location = useLocation()
   const { open } = useSidebarContext()
   const navItems = [
-    { icon: LayoutDashboard, label: t('Sidebar.dashboard'), to: '/' },
+    { icon: HomeIcon, label: t('Sidebar.app_name'), to: '/' },
+    { icon: LayoutDashboard, label: t('Sidebar.dashboard'), to: '/dashboard' },
     { icon: Settings, label: t('Sidebar.settings'), to: '/settings' }
   ]
 

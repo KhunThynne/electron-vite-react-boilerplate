@@ -17,5 +17,6 @@
   },
   "search.exclude": {
     "**/routeTree.gen.ts": true
-  }
+  },
+  "i18n-ally.keystyle": "nested"
 }
