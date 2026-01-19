@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.4](https://github.com/KhunThynne/electron-vite-react-boilerplate/compare/v0.0.3...v0.0.4) (2026-01-19)
+
+
+### Features
+
+* dialog provider ([1cefffe](https://github.com/KhunThynne/electron-vite-react-boilerplate/commit/1cefffe5a08faf0c240ffd06e927ba055f4efaf2))
+* tanstack router provider ([1e9bc51](https://github.com/KhunThynne/electron-vite-react-boilerplate/commit/1e9bc5150708e00e2fe38773a29d798fed094201))
+
+
+### Bug Fixes
+
+* tanstack link ([c4eae1f](https://github.com/KhunThynne/electron-vite-react-boilerplate/commit/c4eae1f4cffc12a4cbcb2b2d5b317cdba32bf478))
+
 ### [0.0.3](https://github.com/KhunThynne/electron-vite-react-boilerplate/compare/v0.0.2...v0.0.3) (2026-01-17)
 
 
