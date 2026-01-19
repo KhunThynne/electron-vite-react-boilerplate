@@ -13,6 +13,13 @@ export default defineConfig({
         '@components': resolve('src/renderer/src/shared/components')
       }
     },
-    plugins: [react(), tailwindcss()]
+    plugins: [
+      react({
+        babel: {
+          plugins: [['babel-plugin-react-compiler']]
+        }
+      }),
+      tailwindcss()
+    ]
   }
 })
