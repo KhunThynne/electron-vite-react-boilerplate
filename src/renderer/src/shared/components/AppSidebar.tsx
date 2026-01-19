@@ -1,16 +1,18 @@
 'use client'
 import { useTranslation } from 'react-i18next'
 import { Home, LayoutDashboard, Settings } from 'lucide-react'
-import { NavLink } from 'react-router-dom'
+
 import { cn } from '@components/ui/utils'
 import { Avatar, AvatarFallback, AvatarImage } from '@components/ui/avatar'
 import clsx from 'clsx'
 import { useSidebarContext } from '../contexts/ProviderSidebar'
 import { SwitchThemeButton } from './SwitchThemeButton'
 import { SwitchLanguageButton } from './SwitchLanguageButton'
+import { Link, useLocation } from '@tanstack/react-router'
 
 export function AppSidebar() {
   const { t } = useTranslation()
+  const location = useLocation()
   const { open } = useSidebarContext()
   const navItems = [
     { icon: LayoutDashboard, label: t('Sidebar.dashboard'), to: '/' },
@@ -26,30 +28,31 @@ export function AppSidebar() {
     >
       <div className="flex h-full  max-lg:w-xs flex-col border-r bg-card ">
         <div className="flex h-14 items-center border-b px-4 lg:h-[60px] lg:px-6 ">
-          <NavLink to="/" className="flex items-center gap-2 font-semibold">
+          <Link to="/" className="flex items-center gap-2 font-semibold">
             <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
               <Home className="size-5" />
             </div>
             <span>{t('Sidebar.app_name')}</span>
-          </NavLink>
+          </Link>
         </div>
         <div className="flex-1 overflow-auto py-4">
           <nav className="grid gap-1 px-2">
-            {navItems.map((item, index) => (
-              <NavLink
-                key={index}
-                to={item.to}
-                className={({ isActive }) =>
-                  cn(
+            {navItems.map((item, index) => {
+              const isActive = item.to === location.pathname
+              return (
+                <Link
+                  key={index}
+                  to={item.to}
+                  className={cn(
                     'flex items-center gap-3 rounded-lg px-3 py-2 transition-all hover:bg-muted hover:text-primary',
                     isActive ? 'bg-muted text-primary' : 'text-muted-foreground'
-                  )
-                }
-              >
-                <item.icon className="h-4 w-4" />
-                {item.label}
-              </NavLink>
-            ))}
+                  )}
+                >
+                  <item.icon className="h-4 w-4" />
+                  {item.label}
+                </Link>
+              )
+            })}
           </nav>
         </div>
         <div className="p-4 flex justify-end gap-2">

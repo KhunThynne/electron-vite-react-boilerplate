@@ -1,15 +1,4 @@
 {
-  "files.readonlyInclude": {
-    "**/routeTree.gen.ts": true
-  },
-  "files.watcherExclude": {
-    "**/routeTree.gen.ts": true
-  },
-  "search.exclude": {
-    "**/routeTree.gen.ts": true
-  },
-  "routesDirectory": "./src/renderer/src/routes",
-  "generatedRouteTree": "./src/renderer/src/routeTree.gen.ts",
-  "routeFileIgnorePrefix": "-",
-  "quoteStyle": "single"
+  "routesDirectory": "src/renderer/src/routes",
+  "generatedRouteTree": "src/renderer/src/routeTree.gen.ts"
 }
